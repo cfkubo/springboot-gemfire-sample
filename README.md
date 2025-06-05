@@ -64,6 +64,7 @@ Maven: Add the following block to the pom.xml file:
 ```
 4. Add your Broadcom Maven Repository credentials.
 Maven: Add the following to the **.m2/settings.xml** file. Replace MY-USERNAME@example and MY-ACCESS-TOKEN with your Broadcom Maven Repository credentials.
+
 ```
 <settings>
     <servers>
@@ -75,15 +76,17 @@ Maven: Add the following to the **.m2/settings.xml** file. Replace MY-USERNAME@e
     </servers>
 </settings>
 ```
+
 5. After you have set up the repository and credentials, add the Spring Boot for VMware GemFire dependency to your application.
 
 
 ### Setup
 
 1. Clone the repository:
+
    ```
-   git clone <repository-url>
-   cd spring-gemfire-performance
+   git clone https://github.com/cfkubo/springboot-gemfire-sample
+   cd springboot-gemfire-sample
    ```
 
 2. Build the project:
@@ -91,17 +94,20 @@ Maven: Add the following to the **.m2/settings.xml** file. Replace MY-USERNAME@e
    mvn clean install
    ```
 
-3. Configure your GemFire server settings in `src/main/resources/application.properties`.
+3. Configure your GemFire server settings in `src/main/resources/application.properties`.  or uses the default setting. If you are unable to connect verify the hostnames.
 
 ### Running the Application
 
 To run the application, execute the following command:
+
 ```
 mvn spring-boot:run
 ```
 ### Running with Docker-compose
 
 ```
+mvn clean package
+
 docker-compose up
 ```
 
