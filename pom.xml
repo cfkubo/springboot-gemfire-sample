@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.5.0</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+     
+
+    <groupId>com.example</groupId>
+    <artifactId>spring-gemfire-performance</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>spring-gemfire-performance</name>
+    <description>Spring Boot application for performance testing with Apache Geode/GemFire</description>
+
+    <properties>
+        <java.version>21</java.version>
+        <gemfire.version>10.0.0</gemfire.version>
+        <spring-boot.version>3.5.0</spring-boot.version>
+        <gemfire.version>10.0.0</gemfire.version>
+        <spring-gemfire.version>10.1.2</spring-gemfire.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <!-- <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-gemfire</artifactId>
+            <version>${gemfire.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency> -->
+
+    <dependency>
+        <groupId>com.vmware.gemfire</groupId>
+        <artifactId>spring-boot-3.0-gemfire-10.0</artifactId>
+        <version>1.0.0</version>
+
+    </dependency>
+    <dependency>
+        <groupId>com.vmware.gemfire</groupId>
+        <artifactId>gemfire-core</artifactId>
+        <version>${gemfire.version}</version>
+    </dependency>
+    <!--if using continuous queries-->
+    <dependency>
+        <groupId>com.vmware.gemfire</groupId>
+        <artifactId>gemfire-cq</artifactId>
+        <version>${gemfire.version}</version>
+    </dependency>
+</dependencies>
+
+       
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>gemfire-release-repo</id>
+            <name>Broadcom GemFire Release Repository</name>
+            <url>https://packages.broadcom.com/artifactory/gemfire/</url>
+        </repository>
+    </repositories>
+</project>
