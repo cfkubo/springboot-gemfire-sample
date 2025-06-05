@@ -105,9 +105,12 @@ mvn spring-boot:run
 ```
 ### Running with Docker-compose
 
+#### Build JAR
 ```
 mvn clean package
-
+```
+#### Run all services in docker
+```
 docker-compose up
 ```
 
