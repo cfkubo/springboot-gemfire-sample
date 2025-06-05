@@ -34,6 +34,7 @@ services:
     ports:
       - "7071:7070"
       - "40405:40405"
+      - "40404:40404"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:7070/gemfire-api/v1/ping"]
       interval: 5s
