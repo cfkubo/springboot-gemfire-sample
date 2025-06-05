@@ -99,6 +99,11 @@ To run the application, execute the following command:
 ```
 mvn spring-boot:run
 ```
+### Running with Docker-compose
+
+```
+docker-compose up
+```
 
 ### Usage
 
